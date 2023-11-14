@@ -1,0 +1,17 @@
+
+@if( scrum ){
+    <h2>{{scrum.name}} Detalles:</h2>
+    <div class="mb-3">
+        <label class="form-label">Nombre del equipo:</label>
+        <input [(ngModel)]="scrum.name" placeholder="Nombre del equipo" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Jugadores:</label>
+        <ul>
+        @for(item of scrum.players; track item) {
+            <li><span>{{ item }}</span></li>
+        }
+        </ul>
+    </div>
+}
+
